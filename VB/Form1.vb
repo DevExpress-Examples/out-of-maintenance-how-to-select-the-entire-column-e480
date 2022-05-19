@@ -20,9 +20,9 @@ Namespace Q184421
 					ds.Add(New DataObject(m, p * m, "Product " & p.ToString()))
 				Next p
 			Next m
-			pivotGridControl1.Fields.Add("Month", PivotArea.ColumnArea)
-			pivotGridControl1.Fields.Add("Sales", PivotArea.DataArea)
-			pivotGridControl1.Fields.Add("ProductName", PivotArea.RowArea)
+			pivotGridControl1.Fields.AddDataSourceColumn("Month", PivotArea.ColumnArea)
+			pivotGridControl1.Fields.AddDataSourceColumn("Sales", PivotArea.DataArea)
+			pivotGridControl1.Fields.AddDataSourceColumn("ProductName", PivotArea.RowArea)
 			pivotGridControl1.DataSource = ds
 
 			comboBox1.Items.Clear()

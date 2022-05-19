@@ -18,9 +18,9 @@ namespace Q184421 {
 					ds.Add(new DataObject(m, p * m, "Product " + p.ToString()));
 				}
 			}
-			pivotGridControl1.Fields.Add("Month", PivotArea.ColumnArea);
-			pivotGridControl1.Fields.Add("Sales", PivotArea.DataArea);
-			pivotGridControl1.Fields.Add("ProductName", PivotArea.RowArea);
+			pivotGridControl1.Fields.AddDataSourceColumn("Month", PivotArea.ColumnArea);
+			pivotGridControl1.Fields.AddDataSourceColumn("Sales", PivotArea.DataArea);
+			pivotGridControl1.Fields.AddDataSourceColumn("ProductName", PivotArea.RowArea);
 			pivotGridControl1.DataSource = ds;
 
 			comboBox1.Items.Clear();
